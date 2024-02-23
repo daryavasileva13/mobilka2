@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_sports_academy"
         android:layout_width="wrap_content"
         android:layout_height="221dp"
         android:layout_alignParentStart="true"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/img_1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_sports_academy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -28,7 +28,7 @@
         android:text="Спорт-клуб “Академия спорта” - это не просто клуб для тренировок, это новое “место силы”, которое будет собирать самых активных. Вас ждёт огромный выбор услуг, профессиональные тренеры и новейшее оборудование" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView_legs"
         android:layout_width="142dp"
         android:layout_height="141dp"
         android:layout_alignParentStart="true"
@@ -39,7 +39,7 @@
         app:srcCompat="@drawable/img" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_opening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -48,7 +48,7 @@
         android:text="Режим работы:" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_opening_hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -58,7 +58,7 @@
         android:text="Каждый день с 9:00 до 23:00" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_contacts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -68,7 +68,7 @@
         android:text="Контакты: +7 (499)999-99-99" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -80,7 +80,7 @@
         android:text="Москва, Проспект Вернадского 1" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_our_sections"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
