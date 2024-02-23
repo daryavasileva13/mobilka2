@@ -78,6 +78,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="144dp"
         android:text="Наши секции"
-        android:backgroundTint="@color/button_color"/>
+        android:backgroundTint="@color/button_color"
+        android:onClick="onButtonClick"/>
 
 </RelativeLayout>
