@@ -13,62 +13,62 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Наши секции:"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:text="@string/text_sections"/>
 
     <TextView
         android:id="@+id/text_gymnastics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Художественная гимнастика"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/text_gymnastics"
         />
 
     <TextView
         android:id="@+id/text_swimming"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Плавание"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/text_swimming"
         />
 
     <TextView
         android:id="@+id/text_acrobatics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Акробатика"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/text_acrobatics"
         />
 
     <TextView
         android:id="@+id/text_yoga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Йога"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/text_yoga"
         />
 
     <TextView
         android:id="@+id/text_football"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Футбол"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/text_football"
         />
 
     <TextView
         android:id="@+id/text_boxing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Бокс"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/text_boxing"
         />
 
     <Button
@@ -77,7 +77,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Записаться"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:backgroundTint="@color/button_color"
+        />
 
     <ImageView
         android:id="@+id/image_cup"

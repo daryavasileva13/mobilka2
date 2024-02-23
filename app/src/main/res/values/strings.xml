@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SportsComplexApp</string>
+    <string name="text_sections">Наши секции:</string>
+    <string name="text_gymnastics">Художественная гимнастика</string>
+    <string name="text_swimming">Плавание</string>
+    <string name="text_acrobatics">Акробатика</string>
+    <string name="text_yoga">Йога</string>
+    <string name="text_football">Футбол</string>
+    <string name="text_boxing">Бокс</string>
+
+
 </resources>
