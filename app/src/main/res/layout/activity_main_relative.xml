@@ -44,7 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="129dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="12dp"
         android:text="Режим работы:" />
 
     <TextView
@@ -53,8 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="325dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="323dp"
         android:text="Каждый день с 9:00 до 23:00" />
 
     <TextView
@@ -63,21 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="286dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="259dp"
         android:text="Контакты: +7 (499)999-99-99" />
-
-    <TextView
-        android:id="@+id/text_place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="180dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="254dp"
-        android:text="Москва, Проспект Вернадского 1" />
 
     <Button
         android:id="@+id/button_our_sections"
