@@ -34,14 +34,6 @@ public class MainActivity3 extends AppCompatActivity {
 
         sectionTextView.setText(sectionReceived);
 
-//        String receivedData = getIntent().getStringExtra("key");
-
-//        textView2.setText(receivedData);
-
-//
-//        EditText editText = findViewById(R.id.section);
-//        editText.setText(receivedData);
-
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +46,5 @@ public class MainActivity3 extends AppCompatActivity {
 
 
     }
-//    public void onButtonClick2(View view) {
-//        Log.i(TAG, "Кнопка нажата");
-//        finish();
-//    }
+
 }
