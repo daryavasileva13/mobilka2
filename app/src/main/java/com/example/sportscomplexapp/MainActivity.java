@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,16 +25,20 @@ public class MainActivity extends AppCompatActivity {
         TextView textView3 = (TextView)findViewById(R.id.text_contacts);
 
         Button button = findViewById(R.id.button_our_sections);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i(TAG, "Кнопка нажата (Программная реализация)");
-            }
-        });
+
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.i(TAG, "Кнопка нажата (Программная реализация)");
+//            }
+//        });
+    }
+    public void onButtonClick(View view) {
+        Log.i(TAG, "Кнопка нажата");
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
     }
 
 }
-//    public void onButtonClick(View view) {
-//        Log.i(TAG, "Кнопка нажата");
-//    }
+
 
