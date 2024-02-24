@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView)findViewById(R.id.text_opening);
         TextView textView2 = (TextView)findViewById(R.id.text_opening_hours);
         TextView textView3 = (TextView)findViewById(R.id.text_contacts);
-        
+
         Button button = findViewById(R.id.button_our_sections);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
