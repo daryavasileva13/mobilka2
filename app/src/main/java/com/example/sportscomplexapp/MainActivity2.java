@@ -1,7 +1,12 @@
 package com.example.sportscomplexapp;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,8 +19,28 @@ import android.widget.TextView;
 public class MainActivity2 extends AppCompatActivity {
 
     private static final String TAG = "MyApp";
+
+    ActivityResultLauncher<Intent> resultActivity2 = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK){
+                        TextView textName_return = (TextView)findViewById(R.id.text_return);
+
+                        Intent receivedIndent = result.getData();
+
+                        String nameReceived = receivedIndent.getStringExtra("name");
+
+                        textName_return.setText(nameReceived);
+
+                    }
+                }
+            }
+    );
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_linear);
@@ -32,6 +57,8 @@ public class MainActivity2 extends AppCompatActivity {
         Button button = findViewById(R.id.button_sign_up);
         EditText sectionEditText = (EditText)findViewById(R.id.section);
 
+        TextView textName_return = (TextView)findViewById(R.id.text_return);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,12 +69,13 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
                 intent.putExtra("Секция", sectionToPass);
 
-                startActivity(intent);
+                //startActivity(intent);
+
+                resultActivity2.launch(intent);
             }
         });
 
     }
-
 
     public void onButtonClick_end2(View view) {
         Log.i(TAG, "Кнопка нажата");

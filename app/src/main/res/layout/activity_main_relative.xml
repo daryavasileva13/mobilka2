@@ -81,6 +81,4 @@
         android:backgroundTint="@color/button_color"
         android:onClick="onButtonClick"/>
 
-
-
 </RelativeLayout>
