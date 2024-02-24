@@ -36,4 +36,8 @@ public class MainActivity2 extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity3.class);
         startActivity(intent);
     }
+    public void onButtonClick_end2(View view) {
+        Log.i(TAG, "Кнопка нажата");
+        finish();
+    }
 }

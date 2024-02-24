@@ -71,6 +71,21 @@
         android:text="@string/text_boxing"
         />
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:text="Записаться на тренировку:"
+        />
+
+    <EditText
+        android:id="@+id/editTextTraining"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:hint="Введите секцию"/>
+
     <Button
         android:id="@+id/button_sign_up"
         android:layout_width="wrap_content"
@@ -80,6 +95,17 @@
         android:layout_gravity="center"
         android:backgroundTint="@color/button_color"
         android:onClick="onButtonClick2"
+        />
+
+    <Button
+        android:id="@+id/button_end2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Назад"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/button_color"
+        android:onClick="onButtonClick_end2"
         />
 
     <ImageView
