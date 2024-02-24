@@ -79,6 +79,7 @@
         android:text="Записаться"
         android:layout_gravity="center"
         android:backgroundTint="@color/button_color"
+        android:onClick="onButtonClick2"
         />
 
     <ImageView
