@@ -17,6 +17,15 @@
         android:textStyle="bold"
         android:textSize="@dimen/text_size_large"/>
 
+    <TextView
+        android:id="@+id/textGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Секция"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"/>
 
 
     <EditText
@@ -24,7 +33,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:hint="Введите имя"
-        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@id/textGet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

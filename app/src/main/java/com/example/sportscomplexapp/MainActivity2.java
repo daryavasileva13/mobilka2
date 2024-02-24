@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,12 +31,39 @@ public class MainActivity2 extends AppCompatActivity {
 
         Button button = findViewById(R.id.button_sign_up);
 
+        EditText sectionEditText = (EditText)findViewById(R.id.section);
+
+//        EditText sectionEditText = (EditText)findViewById(R.id.section);
+
+//        String sectionToPass = sectionEditText.getText().toString();
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "Кнопка нажата");
+
+                String sectionToPass = sectionEditText.getText().toString();
+
+                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                intent.putExtra("Секция", sectionToPass);
+                startActivity(intent);
+            }
+        });
+
     }
-    public void onButtonClick2(View view) {
-        Log.i(TAG, "Кнопка нажата");
-        Intent intent = new Intent(this, MainActivity3.class);
-        startActivity(intent);
-    }
+
+//    public void onButtonClick2(View view) {
+//        Log.i(TAG, "Кнопка нажата");
+//
+//        EditText editText = (EditText)findViewById(R.id.section);
+//        String data = editText.getText().toString();
+//
+//        Intent intent = new Intent(this, MainActivity3.class);
+//        startActivity(intent);
+//        intent.putExtra("key", data);
+//
+//
+//    }
     public void onButtonClick_end2(View view) {
         Log.i(TAG, "Кнопка нажата");
         finish();
