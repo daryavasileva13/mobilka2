@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.content.Intent;
+import android.widget.Toast;
 
 public class MainFragment extends Fragment {
     private static final String TAG = "MyApp";
@@ -24,8 +25,16 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.activity_main_relative, container, false);
+
+
+        Log.i(TAG, "onCreate() called");
+        Toast.makeText(getActivity(), "Fragment created", Toast.LENGTH_SHORT).show();
+
+
+
 
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView_sports_academy);
         ImageView imageView2 = (ImageView) view.findViewById(R.id.imageView_legs);
@@ -45,4 +54,5 @@ public class MainFragment extends Fragment {
 
         return view;
     }
-}
+
+    }
