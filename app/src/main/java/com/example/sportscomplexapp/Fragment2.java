@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,22 @@ public class Fragment2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment2, container, false);
+        //return inflater.inflate(R.layout.fragment2, container, false);
+
+        View view = inflater.inflate(R.layout.fragment2, container, false);
+        TextView textView = view.findViewById(R.id.text_return);
+
+        getParentFragmentManager().setFragmentResultListener("requestKey2", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey,
+                                         @NonNull Bundle bundle) {
+                // We use a String here, but any type that can bput in a Bundle is supported
+                String result = bundle.getString("bundleKey2");
+                textView.setText(result);
+            }
+        });
+
+        return view;
 
     }
 
@@ -45,6 +61,13 @@ public class Fragment2 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle result = new Bundle();
+
+                String sectionToPass = sectionEditText.getText().toString();
+
+                result.putString("bundleKey", sectionToPass);
+                getParentFragmentManager().setFragmentResult("requestKey", result);
+
                 //Log Log = null;
                 Log.i(TAG, "Кнопка нажата (Программная реализация)");
                 openNextFragment2();
