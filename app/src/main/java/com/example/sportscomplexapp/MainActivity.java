@@ -12,10 +12,9 @@ import android.widget.TextView;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
-    public MainActivity(){
+    public MainActivity() {
         super(R.layout.activity_main_relative);
     }
-
     private static final String TAG = "MyApp";
 
     @Override
@@ -23,20 +22,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main_relative);
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.fragment_container_view, Fragment1.class, null)
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_container_view, Fragment1.class, null)
                     .commit();
         }
+    }
+}
 
-        ImageView imageView = (ImageView)findViewById(R.id.imageView_sports_academy);
-        ImageView imageView2 = (ImageView)findViewById(R.id.imageView_legs);
-        TextView textView = (TextView)findViewById(R.id.text_opening);
-        TextView textView2 = (TextView)findViewById(R.id.text_opening_hours);
-        TextView textView3 = (TextView)findViewById(R.id.text_contacts);
 
-        Button button = findViewById(R.id.button_our_sections);
+
+
+
+
+//        ImageView imageView = (ImageView)findViewById(R.id.imageView_sports_academy);
+//        ImageView imageView2 = (ImageView)findViewById(R.id.imageView_legs);
+//        TextView textView = (TextView)findViewById(R.id.text_opening);
+//        TextView textView2 = (TextView)findViewById(R.id.text_opening_hours);
+//        TextView textView3 = (TextView)findViewById(R.id.text_contacts);
+//
+//        Button button = findViewById(R.id.button_our_sections);
 
 //        openFragment();
 
@@ -46,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 //                Log.i(TAG, "Кнопка нажата (Программная реализация)");
 //            }
 //        });
-    }
+
 
 
 
@@ -66,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
 
-}
+
 
 
 
